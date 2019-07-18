@@ -279,6 +279,7 @@ set autoindent
 set showcmd
 " Habilita linhas numeradas
 set number
+set relativenumber
 " Habilita coloração
 syntax enable
 syntax on
