@@ -297,8 +297,10 @@ set ignorecase
 " Mostra parenteses, chaves e colchetes que casam entre si
 set showmatch
 " Mapeamentos de teclas para movimentação
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap gj j
+nnoremap k gk
+nnoremap gk k
 imap <up> <C-O>gk
 imap <down> <C-O>gj
 nmap <up> gk
