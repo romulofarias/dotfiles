@@ -102,6 +102,7 @@ Plug 'regedarek/ZoomWin'
 call plug#end()
 
 filetype plugin indent on
+runtime macros/matchit.vim
 
 " ZoomWin
 " Mappings just like Terminator
