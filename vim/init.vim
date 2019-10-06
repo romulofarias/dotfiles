@@ -101,7 +101,6 @@ Plug 'majutsushi/tagbar' "Mostra tags em uma janela, ordenadas pelo escopo
 Plug 'regedarek/ZoomWin'
 call plug#end()
 
-set nocompatible
 filetype plugin indent on
 runtime macros/matchit.vim
 
