@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-fugitive' "integração com git
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'kana/vim-textobj-entire' "permite operar no arquivo inteiro de qq posicao"
 "---Repeat: Repeats motions from surround and others "
 Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-signify' "integração com outros versionadores
@@ -42,6 +43,7 @@ Plug 'Shougo/neosnippet-snippets'
 " (honza/vim-snippets)
 "Plug 'honza/vim-snippets' "Snippets prontas para usar
 " Async autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Completion from other opened files
 Plug 'Shougo/context_filetype.vim'
