@@ -275,6 +275,7 @@ endif
 " Usa as definições do vim, não as do vi.
 " Habilita todo o potencial e melhorias do vim sobre o vi.
 set nocompatible
+set encoding=utf-8
 set t_Co=256
 " Habilita autoindentação
 set autoindent
@@ -297,6 +298,7 @@ set hlsearch
 set incsearch
 " habilita busca sobre maiúsculas e minúsculas
 set ignorecase
+set smartcase
 " Mostra parenteses, chaves e colchetes que casam entre si
 set showmatch
 " Mapeamentos de teclas para movimentação
