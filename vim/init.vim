@@ -332,8 +332,6 @@ set history=500 "grava 500 comandos e padrões de busca
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set backup
-set backupext=.bkp
 set noswapfile "Sem arquivo swap
 " Em caso de erro, a tela pisca
 set visualbell
