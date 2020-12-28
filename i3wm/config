@@ -190,7 +190,7 @@ bar {
 }
 
 # Background
-exec feh --bg-fill /home/romulo/Imagens/wallpaper.jpg
+exec feh --bg-fill /home/romulo/images/wallpaper.jpg
 
 # session startup
 $exe xfce4-power-manager
