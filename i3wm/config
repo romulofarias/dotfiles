@@ -192,8 +192,5 @@ bar {
 # Background
 exec feh --bg-fill /home/romulo/images/wallpaper.jpg
 
-# session startup
-$exe xfce4-power-manager
-
 # screenshots
 bindsym Print $exe xfce4-screenshooter
