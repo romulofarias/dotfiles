@@ -301,7 +301,8 @@ set ignorecase
 set smartcase
 " Mostra parenteses, chaves e colchetes que casam entre si
 set showmatch
-" Mapeamentos de teclas para movimentação
+"------------------------------------------------------------------------------- 
+" MAPEAMENTOS DE TECLAS PARA MOVIMENTAÇÃO
 nnoremap j gj
 nnoremap gj j
 nnoremap k gk
@@ -312,6 +313,7 @@ nmap <up> gk
 nmap <down> gj
 vmap <up> gk
 vmap <down> gj
+"------------------------------------------------------------------------------- 
 set foldmethod=indent "cria (folders) dobras de código no VIM
 set nofoldenable
 set foldlevel=2
