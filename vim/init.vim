@@ -1,10 +1,4 @@
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"let g:python_host_prog = '/usr/bin/python'
-"let g:python3_host_prog = '/usr/bin/python3'
-"Habilitando o vim-powerline
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
 call plug#begin('~/.config/nvim/plugged')
 " Github Plugins
 " Para instalar plugins no vim:
@@ -13,6 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-fugitive' "integração com git
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired' "navegar entre buffers com ]b, [b, ]B, [B
 Plug 'kana/vim-textobj-entire' "permite operar no arquivo inteiro de qq posicao"
 "---Repeat: Repeats motions from surround and others "
 Plug 'tpope/vim-repeat'
@@ -84,14 +79,6 @@ Plug 'luochen1990/rainbow', {'for': ['c', 'python', 'java', 'vim', 'bash', 'java
 Plug 'lervag/vimtex' "Plugin para Latex
 "--------------------------------------------------------------------
 
-"Plug 'kh3phr3n/python-syntax', {'for': 'python'}
-"Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
-"Plugin 'maralla/completor.vim' "Autocompletar somente para python
-"Plug 'nvie/vim-flake8' "w0rp/ale usa flake8 também
-"Plug 'fisadev/vim-isort', {'for': ['python']} "w0rp/ale usa isort também
-"let g:vim_isort_python_version = 'python3'
-"--------------------------------------------------------------------
-
 "-----HTML CSS eWeb
 Plug 'mattn/emmet-vim' "Plugin para HTML, CSS e Web
 Plug 'othree/html5.vim'
@@ -99,14 +86,13 @@ Plug 'majutsushi/tagbar' "Mostra tags em uma janela, ordenadas pelo escopo
 "--------------------------------------------------------------------
 
 " ZoomWin: Zooms Window in and out "
-""""""""""""""""""""""""""""""""""""
 Plug 'regedarek/ZoomWin'
 call plug#end()
 
 filetype plugin indent on
 runtime macros/matchit.vim
 
-" ZoomWin
+" ZoomWin plugin settings
 " Mappings just like Terminator
 nmap <unique> <leader>z  <Plug>ZoomWin
 if has('nvim')
@@ -115,7 +101,7 @@ if has('nvim')
 endif
 "}}}
 
-" Rainbow
+" Rainbow plugin settings
 let g:rainbow_active = 1
 let g:rainbow_conf = {
 \    'guifgs': ['#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e'],
@@ -140,7 +126,7 @@ let g:rainbow_conf = {
 \    }
 \}
 
-" Polyglot syntax highlight
+" Polyglot syntax highlight plugin settings
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
@@ -150,7 +136,7 @@ let python_highlight_all = 1
 " autocmd BufEnter * call ncm2#enable_for_buffer()
 " :help Ncm2PopupOpen for more information
 
-" Deoplete
+" Deoplete plugin settings
 let g:deoplete#enable_at_startup = 1
 " Cicle through mappings with <tab>
 let g:deoplete#sources#jedi#enable_cache = 1
@@ -180,7 +166,7 @@ inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Go to definition in new tab
 "nmap <leader>D :tab split<CR>:call jedi#goto()<CR>
 
-" Ale
+" Ale plugin settings
 let g:ale_fix_on_save = 1
 let g:ale_linters ={'python':['flake8']}
 let g:ale_fixers = {
@@ -199,7 +185,7 @@ highlight clear ALEWarningSign
 highlight link ALEErrorSign WarningMsg
 highlight link ALEWarningSign ModeMsg
 
-" Airline
+" Airline plugin settings
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
@@ -223,7 +209,7 @@ let g:tmuxline_preset = {
     \'options' : {'status-justify' : 'left'}}
 
 " Configuracao do syntastic
-" syntastic
+" syntastic plugin settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -272,6 +258,7 @@ if has("gui_running")
    set guifont=Inconsolata\ for\ Powerline\ Medium\ 13
 endif
 
+"-------------------------------------------------------------------------------
 " Usa as definições do vim, não as do vi.
 " Habilita todo o potencial e melhorias do vim sobre o vi.
 set nocompatible
@@ -285,13 +272,11 @@ set showcmd
 set number
 set relativenumber
 " Habilita coloração
-syntax enable
 syntax on
 " Usa esquema de cores gruvbox
 colorscheme gruvbox
 set background=dark
 "colorscheme Base2Tone_LakeDark
-"let g:airline_theme='Base2Tone_LakeDark'
 " highlight matching search strings
 set hlsearch
 " habilita busca incremental
@@ -348,8 +333,8 @@ set ttimeout
 set ttimeoutlen=10
 " Automatically read a file that has changed on disk
 set autoread
-set hidden
-if has('inccommand')
+set hidden "habilita navegar entre buffers não salvos
+if has('inccommand') "feature neovim
    set inccommand=split
 endif
 let mapleader="\<space>"
