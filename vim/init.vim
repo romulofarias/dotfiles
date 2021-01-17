@@ -1,4 +1,5 @@
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" source $HOME/.config/nvim/vim-plug/plugins.vim
 call plug#begin('~/.config/nvim/plugged')
 " Github Plugins
 " Para instalar plugins no vim:
@@ -39,17 +40,17 @@ Plug 'Shougo/neosnippet-snippets'
 "Plug 'honza/vim-snippets' "Snippets prontas para usar
 " Async autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Completion from other opened files
 Plug 'Shougo/context_filetype.vim'
 " Python autocompletion
-Plug 'zchee/deoplete-jedi'
+"Plug 'zchee/deoplete-jedi'
 "Plug 'neovim/python-client'
-Plug 'zchee/deoplete-clang'
+"Plug 'zchee/deoplete-clang'
 " Just to add the python go-to-definition and similar features, autocompletion
 " from this plugin is disabled
 "Plug 'davidhalter/jedi-vim'
-
+"Plug 'ycm-core/YouCompleteMe'
 " For conceal markers.
 if has('conceal')
    set conceallevel=2 concealcursor=niv
