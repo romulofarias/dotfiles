@@ -34,12 +34,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'easymotion/vim-easymotion'
     " Surround
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-unimpaired' "navegar entre buffers com ]b, [b, ]B, [B
+    Plug 'kana/vim-textobj-entire' "permite operar no arquivo inteiro de qq posicao"
     " Have the file system follow you around
     Plug 'airblade/vim-rooter'
     " auto set indent settings
     Plug 'tpope/vim-sleuth'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
+    "---Checagem de sintaxe multilinguagem
+    Plug 'scrooloose/syntastic'
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-treesitter/playground'
@@ -51,16 +55,29 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Closetags
     Plug 'alvan/vim-closetag'
     " Themes
-    Plug 'christianchiarulli/nvcode-color-schemes.vim'
+    " Plug 'christianchiarulli/nvcode-color-schemes.vim'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    if has('nvim') " async frameworks completion
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    endif
+    " Completion from other opened files
+    Plug 'Shougo/context_filetype.vim'
     " Status Line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'edkolev/tmuxline.vim' "Statusbar like vim-airline
     Plug 'glepnir/galaxyline.nvim'
     Plug 'kevinhwang91/rnvimr'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
+    " Plug 'kien/ctrlp.vim' "FuzzyFinder muito bom e intuitivo
     " Git
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
@@ -78,8 +95,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Zen mode
     Plug 'junegunn/goyo.vim'
     " Snippets
+    "Plug 'SirVer/ultisnips' "(Usando agora neosnippet.vim)
+    "Plug 'Shougo/neosnippet.vim'
+    "Plug 'Shougo/neosnippet-snippets'
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
+    Plug 'othree/html5.vim'
+    Plug 'majutsushi/tagbar' "Mostra tags em uma janela, ordenadas pelo escopo
     " Interactive code
     Plug 'metakirby5/codi.vim'
     " Better tabline
@@ -105,7 +127,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/vim-gist'
     Plug 'mattn/webapi-vim'
     " Colorizer
-    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'morhetz/gruvbox' " Colorscheme
+    "Plug 'crusoexia/vim-monokai' " Colorscheme
+    "Plug 'skielbasa/vim-material-monokai' " Colorscheme
+    "Plug 'atelierbram/Base2Tone-vim' " Colorscheme
+    " Plug 'norcalli/nvim-colorizer.lua'
     " Intuitive buffer closing
     Plug 'moll/vim-bbye'
     " Debugging
@@ -114,10 +140,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Neovim in Browser
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Rainbow brackets
-    " Plug 'luochen1990/rainbow'
+    " Plug 'luochen1990/rainbow', {'for': ['c', 'python', 'java', 'vim', 'bash', 'javascript', 'vue']}
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
     " Plug 'dense-analysis/ale'
+    " Plug 'w0rp/ale' "{ TODO: 'pip install flake8 isort yapf' }
     " Better Whitespace
     " Plug 'ntpeters/vim-better-whitespace'
     " Multiple Cursors
@@ -127,6 +154,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'maxmellon/vim-jsx-pretty'
     " Plug 'jelera/vim-javascript-syntax'
     " Plugin Graveyard
+    " Latex
+    " Plug 'lervag/vimtex' 
 
     " Debug
     " Plug 'mfussenegger/nvim-dap'
@@ -142,11 +171,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Typescript syntax
     " Plug 'HerringtonDarkholme/yats.vim'
     " Multiple Cursors
-    " Plug 'terryma/vim-multiple-cursors'
+    Plug 'terryma/vim-multiple-cursors'
     " Plug 'kaicataldo/material.vim'
     " Plug 'tomasiser/vim-code-dark'
     " Plug 'mg979/vim-xtabline'
-    " Files
+    " Files and Directories Explorer 
+    Plug 'scrooloose/nerdtree' 
     " Plug 'tpope/vim-eunuch'
     " Vim Wiki
     " Plug 'https://github.com/vimwiki/vimwiki.git'
@@ -155,8 +185,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
     " Plug 'hardcoreplayers/spaceline.vim'
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
     " Ranger
     " Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'
@@ -167,7 +195,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'brooth/far.vim'
     " Plug 'atishay/far.vim'
     " Plug 'romgrk/lib.kom'
-    " Plug 'brooth/far.vim'
+    " ZoomWin: Zooms Window in and out "
+    " Plug 'regedarek/ZoomWin'
     " Debugging
   endif
 

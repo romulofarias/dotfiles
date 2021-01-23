@@ -1,3 +1,23 @@
+"imap <up> <C-O>gk
+"imap <down> <C-O>gj
+"nmap <up> gk
+"nmap <down> gj
+"vmap <up> gk
+"vmap <down> gj
+" normal mode...
+nnoremap j gj
+nnoremap gj j
+nnoremap k gk
+nnoremap gk k
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+" insert mode
+inoremap <Left>  <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up>    <ESC>:echoe "Use k"<CR>
+inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Better nav for omnicomplete
 "inoremap <expr> <c-j> ("\<C-n>")
 "inoremap <expr> <c-k> ("\<C-p>")
@@ -29,6 +49,8 @@ nnoremap <C-Q> :wq!<CR>
 nnoremap <C-c> <Esc>
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Better tabbing
 vnoremap < <gv
@@ -42,3 +64,30 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" Espaço para abrir/fechar dobras
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
+
+" Para editar init.vim em uma janela ao lado (split)
+nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
+" Para carregar o init.vim sem precisar fechar e abrir novamente o nvim
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+
+
+" " Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-Space> <Plug>(neosnippet_expand_or_jump)
+smap <C-Space> <Plug>(neosnippet_expand_or_jump)
+xmap <C-Space> <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
