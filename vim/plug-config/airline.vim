@@ -9,5 +9,5 @@ let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 " Airline with tmuxline
 let g:airline#extensions#tmuxline#enabled = 1
-let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+let airline#extensions#tmuxline#snapshot_file = "$HOME/.tmux-status.conf"
 

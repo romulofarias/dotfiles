@@ -32,7 +32,7 @@ set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
 set ttyfast                             " melhora redesenho de janelas
 set completeopt=longest,menuone         " Desabilita preview  
-set history=1000                        " grava 500 comandos e padrões de busca
+set history=1000                        " grava 1000 comandos e padrões de busca
 set number                              " Line numbers
 set relativenumber			" Line numbers relative to cursorline
 set cursorline                          " Enable highlighting of the current line
@@ -68,7 +68,6 @@ set undofile
 set undoreload=10000
 set title
 set diffopt+=vertical
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " For conceal markers.
 if has('conceal')
