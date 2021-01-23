@@ -148,8 +148,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/nerdtree' 
     " Multiple Cursors
     Plug 'terryma/vim-multiple-cursors'
-    " Latex
-    Plug 'lervag/vimtex' 
+    " ZoomWin: Zooms Window in and out "
+    " Plug 'regedarek/ZoomWin'
+    " Latex Use Overleaf
+    " Plug 'lervag/vimtex' 
 
     " Debug
     " Plug 'mfussenegger/nvim-dap'
@@ -182,12 +184,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'neomake/neomake'
     " Plug 'mhinz/vim-signify'
     " Plug 'preservim/nerdcommenter'
-    " Plug 'brooth/far.vim'
     " Plug 'atishay/far.vim'
     " Plug 'romgrk/lib.kom'
-    " ZoomWin: Zooms Window in and out "
-    " Plug 'regedarek/ZoomWin'
-    " Debugging
   endif
 
 call plug#end()
