@@ -53,7 +53,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Closetags
-    Plug 'alvan/vim-closetag'
+    " Plug 'alvan/vim-closetag'
     " Themes
     " Plug 'christianchiarulli/nvcode-color-schemes.vim'
     " Intellisense
@@ -84,7 +84,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim' " A git commit browser.
     Plug 'rhysd/git-messenger.vim' "It shows the history of commits under the cursor in popup window.
     " Terminal
-    Plug 'voldikss/vim-floaterm'
+    " Plug 'voldikss/vim-floaterm'
     " Start Screen
     Plug 'mhinz/vim-startify'
     " Vista
@@ -110,7 +110,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'brooth/far.vim'
     " Auto change html tags
     Plug 'AndrewRadev/tagalong.vim'
-    " live server
+    " live server plugin for live html, css, and javascript editing in vim
     Plug 'turbio/bracey.vim'
     " Smooth scroll
     Plug 'psliwka/vim-smoothie'
@@ -138,7 +138,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Neovim in Browser
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Rainbow brackets
-    " Plug 'luochen1990/rainbow', {'for': ['c', 'python', 'java', 'vim', 'bash', 'javascript', 'vue']}
+    " Plug 'luochen1990/rainbow'
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
     Plug 'dense-analysis/ale'
@@ -149,7 +149,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Multiple Cursors
     Plug 'terryma/vim-multiple-cursors'
     " ZoomWin: Zooms Window in and out "
-    " Plug 'regedarek/ZoomWin'
+    Plug 'regedarek/ZoomWin'
+    " Vim plugin to sort python imports using isort python uttility
+    Plug 'fisadev/vim-isort'
+    " Indentation pep8 conventions
+    PLug 'Vimjas/vim-python-pep8-indent'
     " Latex Use Overleaf
     " Plug 'lervag/vimtex' 
 

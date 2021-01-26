@@ -1,7 +1,3 @@
-"imap <up> <C-O>gk
-"imap <down> <C-O>gj
-"nmap <up> gk
-"nmap <down> gj
 "vmap <up> gk
 "vmap <down> gj
 " normal mode...
@@ -74,20 +70,3 @@ vnoremap <Space> za
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 " Para carregar o init.vim sem precisar fechar e abrir novamente o nvim
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
-
-
-" " Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-Space> <Plug>(neosnippet_expand_or_jump)
-smap <C-Space> <Plug>(neosnippet_expand_or_jump)
-xmap <C-Space> <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
