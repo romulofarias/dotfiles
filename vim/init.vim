@@ -1,6 +1,7 @@
 " reference: https://github.com/ChristianChiarulli/nvim
 " plugins utilizados
-source $HOME/.config/nvim/vim-plug/plugins.vim
+"source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/dotfiles/vim/vim-plug/plugins.vim
 " configurações gerais
 source $HOME/dotfiles/vim/general/settings.vim
 " mapeamentos de teclas para movimentação
