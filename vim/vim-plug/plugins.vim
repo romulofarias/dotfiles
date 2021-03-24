@@ -27,12 +27,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'easymotion/vim-easymotion'
   " Surround
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-unimpaired' "navegar entre buffers com ]b, [b, ]B, [B
-  Plug 'kana/vim-textobj-entire' "permite operar no arquivo inteiro de qq posicao"
+  " Navegar entre buffers com ]b, [b, ]B, [B
+  Plug 'tpope/vim-unimpaired' 
+  " Permite operar sobre o arquivo inteiro de qq posicao
+  Plug 'kana/vim-textobj-entire' 
   " Have the file system follow you around
   Plug 'airblade/vim-rooter'
-  " auto set indent settings
-  Plug 'tpope/vim-sleuth'
+  " Configura automaticamente identação baseado por outros arquivos do mesmo tipo
+  " Plug 'tpope/vim-sleuth'
   " Better Syntax Support
   Plug 'sheerun/vim-polyglot'
   "---Checagem de sintaxe multilinguagem
@@ -41,8 +43,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'nvim-treesitter/nvim-treesitter'
   " Plug 'nvim-treesitter/playground'
   " Cool Icons
-  Plug 'kyazdani42/nvim-web-devicons'
   Plug 'ryanoasis/vim-devicons'
+  " Plug 'kyazdani42/nvim-web-devicons' "fork Lua de vim-devicons
   " Auto pairs for '(' '[' '{'
   Plug 'jiangmiao/auto-pairs'
   " Closetags
@@ -69,9 +71,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
-  " Plug 'kien/ctrlp.vim' "FuzzyFinder muito bom e intuitivo
+  " Plug 'ctrlpvim/ctrlp.vim' "FuzzyFinder muito bom e intuitivo
   " Git
-  Plug 'airblade/vim-gitgutter'
+  Plug 'airblade/vim-gitgutter' "integra com statusline
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim' " A git commit browser.
@@ -83,9 +85,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Vista
   Plug 'liuchengxu/vista.vim'
   " See what keys do like in emacs
-  Plug 'liuchengxu/vim-which-key'
-  " Zen mode
-  Plug 'junegunn/goyo.vim' " Distraction-free writing in Vim.
+  " Plug 'liuchengxu/vim-which-key'
+  " Zen mode disable vim-airline
+  " Plug 'junegunn/goyo.vim' " Distraction-free writing in Vim.
   " Snippets
   " Plug 'SirVer/ultisnips' "(Usando agora neosnippet.vim)
   " Plug 'Shougo/neosnippet.vim'
@@ -94,19 +96,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'preservim/tagbar' " Mostra tags em uma janela, ordenadas pelo escopo
   " Interactive code
-  Plug 'metakirby5/codi.vim'
+  " Plug 'metakirby5/codi.vim'
   " Better tabline
   Plug 'romgrk/barbar.nvim'
   " undo time travel
-  Plug 'mbbill/undotree'
+  " Plug 'mbbill/undotree'
   " Find and replace
-  Plug 'brooth/far.vim'
+  " Plug 'brooth/far.vim'
   " Auto change html tags
   Plug 'AndrewRadev/tagalong.vim'
   " live server plugin for live html, css, and javascript editing in vim
   Plug 'turbio/bracey.vim'
   " Smooth scroll
-  Plug 'psliwka/vim-smoothie'
+  " Plug 'psliwka/vim-smoothie'
   " " async tasks
   Plug 'skywind3000/asynctasks.vim'
   Plug 'skywind3000/asyncrun.vim'
@@ -126,8 +128,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'norcalli/nvim-colorizer.lua'
   " Intuitive buffer closing
   Plug 'moll/vim-bbye'
-  " Debugging
+  " Debugging code in Vim
   Plug 'puremourning/vimspector'
+  " Maximiza e restaura a janela atual no Vim.
   Plug 'szw/vim-maximizer'
   " Neovim in Browser
   " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
@@ -139,11 +142,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Better Whitespace
   " Plug 'ntpeters/vim-better-whitespace'
   " Files and Directories Explorer 
-  Plug 'scrooloose/nerdtree' 
+  Plug 'preservim/nerdtree' 
   " Multiple Cursors
   Plug 'terryma/vim-multiple-cursors'
   " ZoomWin: Zooms Window in and out "
-  Plug 'regedarek/ZoomWin'
+  " Plug 'regedarek/ZoomWin'
   " Vim plugin to sort python imports using isort python uttility
   Plug 'fisadev/vim-isort'
   " Indentation pep8 conventions
@@ -181,7 +184,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Making stuff
   " Plug 'neomake/neomake'
   " Plug 'mhinz/vim-signify'
-  " Plug 'preservim/nerdcommenter'
+  " Plug 'preservim/nerdcommenter' "Usando tpope/vim-commentary
   " Plug 'atishay/far.vim'
   " Plug 'romgrk/lib.kom'
 
