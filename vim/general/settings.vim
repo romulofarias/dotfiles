@@ -21,7 +21,6 @@ set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
 set softtabstop=2                       " Backspace volta 2 espaços numa identação
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
@@ -59,8 +58,8 @@ set ignorecase
 set smartcase
 set showmatch
 set autoread                            " Automatically read a file that has changed on disk
-set foldmethod=indent                   "cria (folders) dobras de código no VIM
-set nofoldenable
+set foldmethod=indent                   " Cria (folders) dobras de código no VIM
+set nofoldenable			" Todas as dobras aperecem abertas.
 set foldlevel=2
 set wildmode=list:longest,full
 set backspace=indent,eol,start          "backspace atua sobre indentação, quebra de linha e início de linha
@@ -96,3 +95,11 @@ endif
 
 " You can't stop me SAVE AS ROOT
 cmap w!! w !sudo tee %
+
+au BufNewFile,BufRead *.py
+  \ set tabstop=4
+  \     softtabstop=4
+  \     shiftwidth=4
+  \     textwidth=79
+
+au BufNewFile,BufRead *.md set conceallevel=0                      " So that I can see `` in markdown files
