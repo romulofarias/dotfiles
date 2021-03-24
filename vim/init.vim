@@ -14,12 +14,12 @@ source $HOME/dotfiles/vim/plug-config/polyglot.vim
 "source $HOME/dotfiles/vim/plug-config/rainbow.vim
 source $HOME/dotfiles/vim/plug-config/tmuxline.vim
 source $HOME/dotfiles/vim/plug-config/syntastic.vim
-source $HOME/dotfiles/vim/plug-config/zoomwin.vim
+"source $HOME/dotfiles/vim/plug-config/zoomwin.vim
 source $HOME/dotfiles/vim/plug-config/windowswap.vim
 source $HOME/dotfiles/vim/plug-config/asynctask.vim
 source $HOME/dotfiles/vim/plug-config/barbar.vim
 source $HOME/dotfiles/vim/plug-config/easymotion.vim
-source $HOME/dotfiles/vim/plug-config/far.vim
+"source $HOME/dotfiles/vim/plug-config/far.vim
 source $HOME/dotfiles/vim/plug-config/git-messenger.vim
 source $HOME/dotfiles/vim/plug-config/quickscope.vim
 source $HOME/dotfiles/vim/plug-config/rnvimr.vim
