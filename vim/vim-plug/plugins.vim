@@ -151,6 +151,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'fisadev/vim-isort'
   " Indentation pep8 conventions
   PLug 'Vimjas/vim-python-pep8-indent'
+  " Exibe linhas verticais finas em cada nível de recuo para código recuado com espaços.
+  Plug 'Yggdroot/indentLine'
   " Latex Use Overleaf
   " Plug 'lervag/vimtex' 
 
