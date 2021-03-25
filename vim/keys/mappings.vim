@@ -70,3 +70,7 @@ vnoremap <Space> za
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 " Para carregar o init.vim sem precisar fechar e abrir novamente o nvim
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+
+" NerdTree
+nnoremap <F9> :NERDTreeToggle<cr>
+

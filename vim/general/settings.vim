@@ -5,7 +5,6 @@ set nocompatible
 filetype plugin indent on
 runtime macros/matchit.vim
 syntax on                               " Enables syntax highlighing
-colorscheme gruvbox
 set background=dark                     " tell vim what the background color looks like
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set wrap textwidth=80                   " quebra de linha automática na coluna 80
