@@ -90,7 +90,7 @@ bindsym $mod+Shift+Right move right
 #bindsym $mod+v split h
 # split in vertical orientation
 #bindsym $mod+z split v
-# Faz o mesmo que as duas teclas acima
+# Faz o mesmo que as duas teclas acima (use super+;)
 bindsym $mod+semicolon split toggle
 
 #
