@@ -1,4 +1,6 @@
-# bash.conf - configure bash environment
+# .bashrc - configure bash environment
+# aponte seu .bashrc para este arquivo
+EDITOR="/usr/bin/vim"
 PROMPT_DIRTRIM=1
 if [ "$PS1" ]; then
   PS1=":\w\\$ "
@@ -8,6 +10,9 @@ fi
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+
+# create directory if it doesn't exist
+[[ -d $HOME/.local/bin ]] || mkdir $HOME/.local/bin
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
@@ -42,10 +47,16 @@ then
 fi
 export PATH
 
-# create directory if it doesn't exist
-[[ -d $HOME/.local/bin ]] || mkdir $HOME/.local/bin
+# Android Studio
+if ! [[ "$PATH" =~ "/opt/android-studio/bin" ]]
+then
+    PATH="$PATH:/opt/android-studio/bin"
+fi
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
+# User specific aliases and functions
 # aliases 
-
+. ~/dotfiles/bash/bash_aliases
 # functions
 

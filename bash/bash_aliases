@@ -1,0 +1,11 @@
+alias dnfi="sudo dnf install"
+
+_package_query() {
+    local cache="/var/cache/dnf/packages.db"
+    sqlite3 $cache "SELECT * FROM available WHERE pkg LIKE '$1%';"
+}
+
+_autocomplete_dnf() {
+    mapfile -t COMPREPLY < <(_package_query "$2");
+}
+complete -F _autocomplete_dnf dnfi
