@@ -1,11 +1,18 @@
-alias dnfi="sudo dnf install"
+# General Aliases
+alias la='ls -lA'
+alias ll='ls -l'
 
-_package_query() {
-    local cache="/var/cache/dnf/packages.db"
-    sqlite3 $cache "SELECT * FROM available WHERE pkg LIKE '$1%';"
-}
+# Fedora Aliases
+if grep -iq 'fedora' /etc/os-release; then
+  alias dnfi="sudo dnf install"
 
-_autocomplete_dnf() {
-    mapfile -t COMPREPLY < <(_package_query "$2");
-}
-complete -F _autocomplete_dnf dnfi
+  _package_query() {
+      local cache="/var/cache/dnf/packages.db"
+      sqlite3 $cache "SELECT * FROM available WHERE pkg LIKE '$1%';"
+  }
+
+  _autocomplete_dnf() {
+      mapfile -t COMPREPLY < <(_package_query "$2");
+  }
+  complete -F _autocomplete_dnf dnfi
+fi
