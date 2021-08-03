@@ -1,10 +1,10 @@
 [Configuration]
 MiscAlwaysShowTabs=FALSE
-MiscBell=TRUE
+MiscBell=FALSE
 MiscBellUrgent=TRUE
 MiscBordersDefault=TRUE
 MiscCursorBlinks=TRUE
-MiscCursorShape=TERMINAL_CURSOR_BLOCK_IBEAM
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=FALSE

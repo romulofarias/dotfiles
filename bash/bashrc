@@ -57,6 +57,6 @@ fi
 
 # User specific aliases and functions
 # aliases 
-. ~/dotfiles/bash/bash_aliases
+[ -f ~/dotfiles/bash/bash_aliases ] && . ~/dotfiles/bash/bash_aliases
 # functions
 

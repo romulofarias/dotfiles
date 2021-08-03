@@ -1,7 +1,7 @@
 # General Aliases
 alias la='ls -lA'
 alias ll='ls -l'
-
+[ -f ~/dotfiles/vim/general/essential.vim ] && alias vi='vim -u ~/dotfiles/vim/general/essential.vim'
 # Fedora Aliases
 if grep -iq 'fedora' /etc/os-release; then
   alias dnfi="sudo dnf install"
