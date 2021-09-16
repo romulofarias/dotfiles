@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Set critical battery percentage level
+declare -i LOWLVL=7
+
+#STATE = charging or discharging
+read -d ' ' STATE BATTERY < <(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | \
+        awk '/state|percentage/ {print $2}')
+#STATE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | \
+#        awk '/state/ {print $2}')
+
+#BATTERY=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | \
+#    awk '/percentage/ {print $2}')
+
+echo "<span font='Font Awesome'>⚡︁</span> $BATTERY"
+
+[[ ${STATE,,} = "discharging" ]] && [[ ${BATTERY//%/} -lt $LOWLVL ]] && \
+    i3-nagbar -t warning -m "Battery low level" >&- 2>&-
+
