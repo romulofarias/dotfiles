@@ -1,3 +1,5 @@
+# Troca capslock por esc
+#setxkbmap -option caps:swapescape
 # General Aliases
 alias la='ls -lA'
 alias ll='ls -l'

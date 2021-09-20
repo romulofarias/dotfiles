@@ -1,6 +1,3 @@
-" set leader key
-let g:mapleader = "\<Space>"
-
 set nocompatible
 filetype plugin indent on
 runtime macros/matchit.vim

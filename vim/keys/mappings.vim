@@ -1,3 +1,6 @@
+" set leader key
+let g:mapleader = "\<Space>"
+
 "vmap <up> gk
 "vmap <down> gj
 " normal mode...
@@ -63,8 +66,8 @@ nnoremap <Leader>O O<Esc>^Da
 
 " Espaço para abrir/fechar dobras
 " Space to toggle folds.
-nnoremap <Space> za
-vnoremap <Space> za
+"nnoremap <Space> za
+"vnoremap <Space> za
 
 " Para editar init.vim em uma janela ao lado (split)
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
