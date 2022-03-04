@@ -199,6 +199,7 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bar {
         status_command i3blocks
         position top
+        tray_output primary #nm-applet in primary display
 }
 
 # Background
