@@ -1,9 +1,11 @@
 # Troca capslock por esc
 #setxkbmap -option caps:swapescape
 # General Aliases
+alias l='ls -lA'
 alias la='ls -lA'
 alias ll='ls -l'
 [ -f ~/dotfiles/vim/general/essential.vim ] && alias vi='vim -u ~/dotfiles/vim/general/essential.vim'
+
 # Fedora Aliases
 if grep -iq 'fedora' /etc/os-release; then
   alias dnfi="sudo dnf install"
@@ -18,3 +20,6 @@ if grep -iq 'fedora' /etc/os-release; then
   }
   complete -F _autocomplete_dnf dnfi
 fi
+
+# SOURCE BASH.CONF
+[ -f ~/dotfiles/bash/bash.conf ] && . ~/dotfiles/bash/bash.conf
