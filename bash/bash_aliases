@@ -1,10 +1,26 @@
 # Troca capslock por esc
 #setxkbmap -option caps:swapescape
 # General Aliases
-alias l='ls -lA'
+# ls
+LS_OPTIONS='--group-directories-first --color=auto'
+alias ls='ls $LS_OPTIONS'
 alias la='ls -lA'
 alias ll='ls -l'
+alias l.='ll -d .*' #apenas ocultos
+
+# Vi
 [ -f ~/dotfiles/vim/general/essential.vim ] && alias vi='vim -u ~/dotfiles/vim/general/essential.vim'
+
+# grep
+GREP_OPTIONS='--color=auto'
+alias grep='grep $GREP_OPTIONS'
+alias fgrep='fgrep $GREP_OPTIONS'
+alias egrep='egrep $GREP_OPTIONS'
+
+# download de videos
+alias yt='youtube-de --add-metadata -ic'
+# download apenas do audio
+alias yta='yt -x'
 
 # Fedora Aliases
 if grep -iq 'fedora' /etc/os-release; then
