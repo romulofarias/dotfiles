@@ -5,7 +5,7 @@
 LS_OPTIONS='--group-directories-first --color=auto'
 alias ls='ls $LS_OPTIONS'
 alias la='ls -lA'
-alias ll='ls -l'
+alias ll='ls -lNh'
 alias l.='ll -d .*' #apenas ocultos
 
 # Vi
@@ -18,7 +18,7 @@ alias fgrep='fgrep $GREP_OPTIONS'
 alias egrep='egrep $GREP_OPTIONS'
 
 # download de videos
-alias yt='youtube-de --add-metadata -ic'
+alias yt='youtube-dl --add-metadata -ic'
 # download apenas do audio
 alias yta='yt -x'
 
