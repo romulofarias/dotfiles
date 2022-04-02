@@ -11,6 +11,10 @@ alias l.='ll -d .*' #apenas ocultos
 # Vi
 [ -f ~/dotfiles/vim/general/essential.vim ] && alias vi='vim -u ~/dotfiles/vim/general/essential.vim'
 
+# Vi
+[ -f /home/romulo/eclipse/java-2022-03/eclipse/eclipse ] && \
+    alias eclipse='/home/romulo/eclipse/java-2022-03/eclipse/eclipse'
+
 # grep
 GREP_OPTIONS='--color=auto'
 alias grep='grep $GREP_OPTIONS'
