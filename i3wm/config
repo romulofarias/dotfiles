@@ -96,9 +96,9 @@ bindsym $mod+semicolon split toggle
 
 #
 # enter fullscreen mode for the focused container
-$sup+F11 fullscreen toggle
+#$sup+F11 fullscreen toggle
 bindsym $mod+f $exe firefox
-
+bindsym $mod+b exec ~/dotfiles/i3wm/lock
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
