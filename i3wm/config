@@ -212,7 +212,7 @@ bindsym Print $exe xfce4-screenshooter
 # power management
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) poweroff
 mode "$mode_system" {
-	bindsym l $exe i3lock, mode "default"
+	bindsym l exec ~/dotfiles/i3wm/lock, mode "default"
 	bindsym e $exe i3-msg exit, mode "default"
 	bindsym s $exe systemctl suspend, mode "default"
 	bindsym h $exe systemctl hibernate, mode "default"
