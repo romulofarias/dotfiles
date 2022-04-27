@@ -10,6 +10,7 @@ source $HOME/dotfiles/vim/keys/mappings.vim
 "" configuração dos plugins
 source $HOME/dotfiles/vim/plug-config/airline.vim
 source $HOME/dotfiles/vim/plug-config/ale.vim
+source $HOME/dotfiles/vim/plug-config/coc.vim
 "source $HOME/dotfiles/vim/plug-config/deoplete.vim
 source $HOME/dotfiles/vim/plug-config/tmuxline.vim
 source $HOME/dotfiles/vim/plug-config/syntastic.vim

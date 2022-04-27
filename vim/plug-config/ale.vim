@@ -5,6 +5,8 @@ let g:ale_fix_on_save = 1
 let g:ale_linters ={
 	\ 'python':['flake8', 'pylint'],
 	\ 'javascript': ['eslint'],
+    \ 'c': [],
+    \ 'cpp': [],
 	\}
 let g:ale_fixers = {
 \   'python': [
@@ -12,7 +14,9 @@ let g:ale_fixers = {
 \       'yapf',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
-\   ]
+\   ],
+\   'c': ['clang-format'],
+\   'cpp':['clang-format'],
 \}
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = 'Δ'
