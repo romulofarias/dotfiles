@@ -69,3 +69,5 @@ ex() {
     fi
 }
 
+# Seiscomp aliases
+#alias scconfig='seiscomp exec scconfig'
