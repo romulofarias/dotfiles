@@ -57,7 +57,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "    Plug 'roxma/nvim-yarp'
   "    Plug 'roxma/vim-hug-neovim-rpc'
   "endif
-  Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+  "Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
   " Completion from other opened files
   " Plug 'Shougo/context_filetype.vim'
   " Status Line
@@ -88,10 +88,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Zen mode disable vim-airline
   " Plug 'junegunn/goyo.vim' " Distraction-free writing in Vim.
   " Snippets
-  " Plug 'SirVer/ultisnips' "(Usando agora neosnippet.vim)
+  Plug 'SirVer/ultisnips' "(Usando agora neosnippet.vim)
   " Plug 'Shougo/neosnippet.vim'
   " Plug 'Shougo/neosnippet-snippets'
-  Plug 'honza/vim-snippets'
+  "Plug 'honza/vim-snippets'
   Plug 'mattn/emmet-vim'
   Plug 'preservim/tagbar' " Mostra tags em uma janela, ordenadas pelo escopo
   " Interactive code

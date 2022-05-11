@@ -7,6 +7,7 @@ let g:ale_linters ={
 	\ 'javascript': ['eslint'],
     \ 'c': [],
     \ 'cpp': [],
+    \ 'sh' : ['language_server'],
 	\}
 let g:ale_fixers = {
 \   'python': [
