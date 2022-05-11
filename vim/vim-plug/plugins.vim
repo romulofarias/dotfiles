@@ -91,7 +91,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'SirVer/ultisnips' "(Usando agora neosnippet.vim)
   " Plug 'Shougo/neosnippet.vim'
   " Plug 'Shougo/neosnippet-snippets'
-  "Plug 'honza/vim-snippets'
+  Plug 'honza/vim-snippets'
   Plug 'mattn/emmet-vim'
   Plug 'preservim/tagbar' " Mostra tags em uma janela, ordenadas pelo escopo
   " Interactive code
