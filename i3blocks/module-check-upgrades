@@ -5,8 +5,8 @@
 # n: número de pacotes novos
 # r: número de pacotes removidos
 # h: número de pacotes mantidos (held)
-read u n r h <<< $(sudo apt-get upgrade | grep ^[0-9] | tr -cd '0-9 ')
+read u n r h < /tmp/upgrade.out
 
 #output
 [[ $u -gt 0 ]] && color="#BF616A" || color="#3B4252"
-echo "<span color='$color'>$u/$n/$r/$h</span>"
+echo "<span color='$color'> $u/ $n/ $r/ $h</span>"
