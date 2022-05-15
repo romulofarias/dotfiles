@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-. $HOME/.local/bin/cron-exp-vars
+. ~/dotfiles/i3blocks/aux/cron-exp-vars
 
 pkill -RTMIN+12 i3blocks
