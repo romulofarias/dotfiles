@@ -1,0 +1,26 @@
+# Quartus II web edition 13.0sp1 
+export QUARTUS_64BIT=1					# Remove this if running on 32 bit
+export ALTERA_ROOT="$HOME/altera/13.0sp1"		# Change this to the path you've installed Altera Quartus at
+
+[[ "$QUARTUS_ROOTDIR_OVERRIDE" =~ "$ALTERA_ROOT/quartus" ]] || \
+    export QUARTUS_ROOTDIR_OVERRIDE="$ALTERA_ROOT/quartus"
+
+[[ "$QSYS_ROOTDIR" =~ "$QUARTUS_ROOTDIR_OVERRIDE/sopc_builder/bin" ]] || \
+    export QSYS_ROOTDIR="$QUARTUS_ROOTDIR_OVERRIDE/sopc_builder/bin"
+
+[[ "$QUARTUS_LIBRARY_PATHS" =~ "$QUARTUS_ROOTDIR_OVERRIDE/linux" ]] || \
+    QUARTUS_LIBRARY_PATHS="$QUARTUS_ROOTDIR_OVERRIDE/linux/"
+[[ "$QUARTUS_LIBRARY_PATHS" =~ "/lib/x86_64-linux-gnu" ]] || \
+    QUARTUS_LIBRARY_PATHS="$QUARTUS_LIBRARY_PATHS:/lib/x86_64-linux-gnu"
+[[ "$QUARTUS_LIBRARY_PATHS" =~ "/usr/local/lib" ]] || \
+    QUARTUS_LIBRARY_PATHS="$QUARTUS_LIBRARY_PATHS:/usr/local/lib"
+    export QUARTUS_LIBRARY_PATHS
+
+[[ "$SOPC_KIT_NIOS2" =~ "$ALTERA_ROOT/nios2eds" ]] || \
+    export SOPC_KIT_NIOS2="$ALTERA_ROOT/nios2eds"
+
+[[ "$LD_LIBRARY_PATH" =~ "$QUARTUS_LIBRARY_PATHS" ]] || \
+    export LD_LIBRARY_PATH="$QUARTUS_LIBRARY_PATHS:$LD_LIBRARY_PATH"
+
+[[ "$PATH" =~ "$ALTERA_ROOT/quartus/bin" ]] || \
+    export PATH="$PATH:$ALTERA_ROOT/quartus/bin"
