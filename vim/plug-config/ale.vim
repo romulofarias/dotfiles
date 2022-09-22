@@ -5,6 +5,7 @@ let g:ale_fix_on_save = 1
 let g:ale_linters ={
 	\ 'python':['flake8', 'pylint'],
 	\ 'javascript': ['eslint'],
+	\ 'html': ['tidy'],
     \ 'c': [],
     \ 'cpp': [],
     \ 'sh' : ['language_server'],

@@ -6,3 +6,4 @@ let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ 'coc-html'
     \ ]
+let g:coc_disable_startup_warning = 1
