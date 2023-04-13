@@ -109,7 +109,9 @@ bindsym $mod+Shift+question layout toggle all
 workspace_layout tabbed
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
+default_border pixel 0
+default_floating_border pixel 0
+for_window [class="^.*"] border pixel 0
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
