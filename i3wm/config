@@ -110,9 +110,9 @@ workspace_layout tabbed
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 # hide titlebar
-default_border pixel 0
-default_floating_border pixel 0
-for_window [class="^.*"] border pixel 0
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
