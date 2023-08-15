@@ -1,5 +1,7 @@
 set nocompatible
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
 runtime macros/matchit.vim
 syntax on                               " Enables syntax highlighing
 set background=dark                     " tell vim what the background color looks like
