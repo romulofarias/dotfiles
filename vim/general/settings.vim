@@ -63,6 +63,7 @@ set wildmode=list:longest,full
 set backspace=indent,eol,start          "backspace atua sobre indentação, quebra de linha e início de linha
 set undofile
 set undoreload=10000
+set undodir=~/.cache/vim/undofiles
 set title
 set diffopt+=vertical
 
