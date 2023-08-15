@@ -12,7 +12,7 @@ set colorcolumn=+1                      " coluna limite de texto é destacada
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler         		        " Show the cursor position all the time
+set ruler         		                " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
@@ -31,7 +31,7 @@ set ttyfast                             " melhora redesenho de janelas
 set completeopt=longest,menuone         " Desabilita preview  
 set history=1000                        " grava 1000 comandos e padrões de busca
 set number                              " Line numbers
-set relativenumber			" Line numbers relative to cursorline
+set relativenumber			            " Line numbers relative to cursorline
 set cursorline                          " Enable highlighting of the current line
 set showtabline=2                       " Always show tabs
 set showcmd                             " Always show commands
@@ -50,14 +50,14 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 "set autochdir                           " Your working directory will always be the same as your working directory
-set hlsearch 				" Enable highlight search
-set incsearch				" The matched string is highlighted while typing a search command
+set hlsearch 				            " Enable highlight search
+set incsearch				            " The matched string is highlighted while typing a search command
 set ignorecase
 set smartcase
 set showmatch
 set autoread                            " Automatically read a file that has changed on disk
 set foldmethod=indent                   " Cria (folders) dobras de código no VIM
-set nofoldenable			" Todas as dobras aperecem abertas.
+set nofoldenable			            " Todas as dobras aperecem abertas.
 set foldlevel=2
 set wildmode=list:longest,full
 set backspace=indent,eol,start          "backspace atua sobre indentação, quebra de linha e início de linha
@@ -66,7 +66,8 @@ set undoreload=10000
 set undodir=~/.cache/vim/undofiles
 set title
 set diffopt+=vertical
-
+set scrolloff=8                         "número mínimo de linhas acima e abaixo do cursor
+set signcolumn=yes                      "coluna para sinalização em lintings
 " For conceal markers.
 if has('conceal')
    set conceallevel=2 concealcursor=niv

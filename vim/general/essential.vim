@@ -15,5 +15,6 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set background=dark
+set scrolloff=8
 colorscheme desert
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l/%L,\ col\ %c)\ %P

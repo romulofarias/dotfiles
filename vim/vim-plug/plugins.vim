@@ -36,9 +36,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Configura automaticamente identação baseado por outros arquivos do mesmo tipo
   " Plug 'tpope/vim-sleuth'
   " Better Syntax Support
-  " Plug 'sheerun/vim-polyglot'
-  "---Checagem de sintaxe multilinguagem
-  Plug 'scrooloose/syntastic'
+  Plug 'sheerun/vim-polyglot'
   " Treesitter TODO avaliar futuramente nvim-treesitter
   " Plug 'nvim-treesitter/nvim-treesitter'
   " Plug 'nvim-treesitter/playground'
