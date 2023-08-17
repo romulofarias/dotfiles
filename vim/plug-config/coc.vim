@@ -120,8 +120,8 @@ endif
 
 " Use CTRL-S for selections ranges
 " Requires 'textDocument/selectionRange' support of language server
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
+" nmap <silent> <C-s> <Plug>(coc-range-select)
+" xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
@@ -189,7 +189,7 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 " Coc Explorer Config
-:nnoremap <space>e :CocCommand explorer<CR>
+nnoremap <space>e :CocCommand explorer<CR>
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {

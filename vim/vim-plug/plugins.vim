@@ -28,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Surround
   Plug 'tpope/vim-surround'
   " Navegar entre buffers com ]b, [b, ]B, [B
-  Plug 'tpope/vim-unimpaired' 
+  Plug 'tpope/vim-unimpaired'
   " Permite operar sobre o arquivo inteiro de qq posicao
   " Plug 'kana/vim-textobj-entire' TODO:bug
   " Have the file system follow you around TODO:Testar no futuro
@@ -61,10 +61,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Status Line
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'edkolev/tmuxline.vim' " Statusbar like vim-airline
+  " Plug 'edkolev/tmuxline.vim' " Statusbar like vim-airline
   " Plug 'glepnir/galaxyline.nvim' " Requires neovim 5.0+
   " TODO: testar futuramente
-  " Plug 'kevinhwang91/rnvimr' " This plugin doesn't support VIM 
+  " Plug 'kevinhwang91/rnvimr' " This plugin doesn't support VIM
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
@@ -140,8 +140,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'dense-analysis/ale'
   " Better Whitespace
   " Plug 'ntpeters/vim-better-whitespace'
-  " Files and Directories Explorer 
-  Plug 'preservim/nerdtree' 
+  " Files and Directories Explorer
+  Plug 'preservim/nerdtree'
   " Multiple Cursors
   Plug 'terryma/vim-multiple-cursors'
   " ZoomWin: Zooms Window in and out "
@@ -155,7 +155,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Exibe linhas verticais finas em cada nível de recuo para código recuado com espaços.
   Plug 'Yggdroot/indentLine'
   " Latex Use Overleaf
-  " Plug 'lervag/vimtex' 
+  " Plug 'lervag/vimtex'
   " Cool Icons
   Plug 'ryanoasis/vim-devicons'
   " Plug 'kyazdani42/nvim-web-devicons' "fork Lua de vim-devicons
