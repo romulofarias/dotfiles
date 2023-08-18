@@ -40,10 +40,14 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " SHIFT-TAB will go back
 "nnoremap <S-TAB> :bprevious<CR>
 
+" Cria uma tab
+nmap <leader>te :tabe<CR>
 " Alternate way to save
-nnoremap <C-s> :w<CR>
+nnoremap <silent><C-s> :<C-u>update<CR>
+vnoremap <silent><C-s> <C-c>:update<CR>gv
+inoremap <silent><C-s> <C-o>:update<CR>
 " Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
+nnoremap <leader>Q :wq!<CR>
 " Use control-c instead of escape
 "nnoremap <C-c> <Esc>
 
