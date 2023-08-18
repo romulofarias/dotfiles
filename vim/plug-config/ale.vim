@@ -16,15 +16,12 @@ let g:ale_fixers = {
 \   'cpp':['clang-format'],
 \    '*': ['trim_whitespace'],
 \}
-let g:ale_sign_error = 'X'
-let g:ale_sign_warning = '!'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 highlight link ALEErrorSign WarningMsg
 highlight link ALEWarningSign ModeMsg
 " Disable whitespace warnings
 let g:ale_warn_about_trailing_whitespace = 0
-
 " Python com ALE e flake8
 let g:ale_python_flake8_options = '--max-line-length=100 --extend-ignore=E203'
 
