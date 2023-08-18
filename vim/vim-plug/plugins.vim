@@ -119,7 +119,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mattn/webapi-vim'
   " Colorizer
   Plug 'morhetz/gruvbox' " Colorscheme
-  Plug 'tomasiser/vim-code-dark' " Colorscheme
+  Plug 'sainnhe/sonokai' " Colorscheme
   " Plug 'crusoexia/vim-monokai' " Colorscheme
   " Plug 'skielbasa/vim-material-monokai' " Colorscheme
   " Plug 'atelierbram/Base2Tone-vim' " Colorscheme
@@ -130,7 +130,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " TODO: testar futuramente
   " Plug 'puremourning/vimspector'
   " Maximiza e restaura a janela atual no Vim.
-  Plug 'szw/vim-maximizer'
+  " Plug 'szw/vim-maximizer'
   " Neovim in Browser
   " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   " Rainbow brackets
