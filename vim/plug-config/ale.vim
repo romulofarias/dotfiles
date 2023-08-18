@@ -11,11 +11,7 @@ let g:ale_linters ={
     \ 'sh' : ['language_server'],
 	\}
 let g:ale_fixers = {
-\   'python': [
-\       'isort',
-\       'yapf',
-\       'remove_trailing_lines'
-\   ],
+\   'python': ['isort','black'],
 \   'c': ['clang-format'],
 \   'cpp':['clang-format'],
 \    '*': ['trim_whitespace'],
@@ -29,5 +25,11 @@ highlight link ALEWarningSign ModeMsg
 " Disable whitespace warnings
 let g:ale_warn_about_trailing_whitespace = 0
 
-" Python com ALE
+" Python com ALE e flake8
 let g:ale_python_flake8_options = '--max-line-length=100 --extend-ignore=E203'
+
+" Python ALE Black formatador de código
+let g:ale_python_black_options = '--line-length 100'
+
+" Python ALE e isort
+let g:ale_python_isort_options = '--profile black -l 100'
