@@ -16,6 +16,8 @@ let g:ale_fixers = {
 \   'cpp':['clang-format'],
 \    '*': ['trim_whitespace'],
 \}
+let g:ale_sign_error =  '>>'
+let g:ale_sign_warning = '--'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 highlight link ALEErrorSign WarningMsg
