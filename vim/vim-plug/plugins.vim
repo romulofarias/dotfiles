@@ -55,7 +55,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   "    Plug 'roxma/nvim-yarp'
   "    Plug 'roxma/vim-hug-neovim-rpc'
   "endif
-  "Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+  Plug 'davidhalter/jedi-vim' "Autocomplete Python
   " Completion from other opened files
   " Plug 'Shougo/context_filetype.vim'
   " Status Line

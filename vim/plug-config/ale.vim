@@ -28,3 +28,6 @@ highlight link ALEErrorSign WarningMsg
 highlight link ALEWarningSign ModeMsg
 " Disable whitespace warnings
 let g:ale_warn_about_trailing_whitespace = 0
+
+" Python com ALE
+let g:ale_python_flake8_options = '--max-line-length=100 --extend-ignore=E203'

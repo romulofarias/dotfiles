@@ -6,7 +6,7 @@ runtime macros/matchit.vim
 syntax on                               " Enables syntax highlighing
 set background=dark                     " tell vim what the background color looks like
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set wrap textwidth=80                   " quebra de linha automática na coluna 80
+set wrap textwidth=100                  " quebra de linha automática na coluna 80
 set linebreak
 set colorcolumn=+1                      " coluna limite de texto é destacada
 set encoding=utf-8                      " The encoding displayed
@@ -28,7 +28,7 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
 set ttyfast                             " melhora redesenho de janelas
-set completeopt=longest,menuone         " Desabilita preview  
+set completeopt=longest,menuone         " Desabilita preview
 set history=1000                        " grava 1000 comandos e padrões de busca
 set number                              " Line numbers
 set relativenumber			            " Line numbers relative to cursorline
