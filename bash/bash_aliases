@@ -8,6 +8,9 @@ alias la='ls -lA'
 alias ll='ls -lNh'
 alias l.='ll -d .*' #apenas ocultos
 
+# GNU OCTAVE
+alias octave='octave --gui'
+
 # Vi
 [ -f ~/dotfiles/vim/general/essential.vim ] && alias vi='vim -u ~/dotfiles/vim/general/essential.vim'
 
