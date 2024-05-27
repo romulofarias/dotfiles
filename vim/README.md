@@ -11,7 +11,7 @@ Ebook: [Vim para noobs](https://leanpub.com/vimparanoobs/read)
 
 Vimcasts: [vimcasts.org](http://vimcasts.org/)
 
-## Comandos globais
+# Comandos globais
 | Comando | Descrição |
 |---|---|
 | `:h[elp] keyword` | Abre ajuda para `keyword` |
@@ -25,7 +25,7 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 > No sistema de ajuda do vim, use `CTRL-]` para acessar um link, e `CTRL-o` ou `CTRL-t` para
 > voltar.
 
-## Modos de operação do VIM
+# Modos de operação do VIM
 | Modo | Acesso |
 | --- | --- |
 | Normal | `<Esc>` ou `CTRL-[` |
@@ -37,6 +37,8 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | Substituição virtual | `gr`, `gR` (sobrescrever caracteres invisíveis, como tabulações e recuos) |
 | Seleção | Estando em modo visual, pressione `CTRL-g` |
 
+> O modo *inserção normal* permite executar um comando em modo normal (inclusive mudar para modo
+> visual) e após execução do comando, retornar ao modo inserção
 # Movimento do cursor
 | Comando | Descrição |
 | --- | --- |
@@ -48,8 +50,7 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `gk` | Move cursor para cima em quebras visuais de linha |
 | `H` | Move cursor para parte superior da tela[^1] |
 | `M` | Move cursor para meio da tela |
-| `L` | Move cursor para parte inferior da tela |
-| `L` | Move cursor para parte inferior da tela |
+| `L` | Move cursor para parte inferior da tela[^1] |
 | `w`         | Salta para o início da palavra seguinte |
 | `W`         | Salta para o início da palavra seguinte (inclui pontuação) |
 | `e`         | Salta para o fim da palavra seguinte |
@@ -63,6 +64,7 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `^` ou `0w` | Salta para o primeiro caractere visível da linha |
 | `$`         | Salta para o fim da linha |
 | `g_`        | Salta para o último caractere visível da linha |
+| `gM`        | Salta para o meio da linha atual |
 | `gg`        | Vai para a primeira linha do texto |
 | `G`         | Vai para a última linha do texto |
 | `Ngg` ou `NG` | Vai para a linha `N` |
@@ -86,3 +88,18 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 
 > Prefixar um movimento com um número faz com que ele seja repetido.
 [^1]: Opção **scrolloff** interfere no posicionamento do cursor
+
+# Edição ágil
+| Comando | Descrição |
+| --- | --- |
+| `a` | Entra em modo inserção após o cursor |
+| `i` | Entra em modo inserção antes do cursor |
+| `A` | Entra em modo inserção no final da linha corrente |
+| `I` | Entra em modo inserção no início da linha corrente (desconsidera espaços) |
+| `o` | Entra em modo inserção na linha abaixo |
+| `O` | Entra em modo inserção na linha acima |
+| `s` | Apaga caractere sob o cursor e entra em inserção (mesmo que `cl`) |
+| `S` | Apaga a linha atual e entra em modo inserção (mesmo que `cc` ou `^C`) |
+| `cn<CR>` | Apaga as n próximas linhas e entra em modo inserção |
+| `C` | Apaga do cursor ao final da linha e entra em inserção |
+| `R` | Insere sobrescrevendo |
