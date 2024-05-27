@@ -4,8 +4,11 @@
 
 ## Referências
 Fonte: [Vim Cheat Sheet](https://vim.rtorr.com/lang/pt_br)
+
 Ajuda: [Help online](https://vimhelp.org/)
+
 Ebook: [Vim para noobs](https://leanpub.com/vimparanoobs/read)
+
 Vimcasts: [vimcasts.org](http://vimcasts.org/)
 
 ## Comandos globais
