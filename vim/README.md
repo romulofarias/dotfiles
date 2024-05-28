@@ -19,8 +19,10 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `:x` ou `:wq` ou `ZZ` | Salva e sai |
 | `:q!` ou `ZQ` | Sai (forçado) sem salvar |
 | `:w novo_arq` | Salva novo arquivo, mas permanece editando arquivo original |
+| `:10,20 w! trecho_arq` | Salva trecho (linha 10 a 20), mas permanece editando arquivo original |
 | `:sav[eas] novo_arq` | Salva novo arquivo e passa a editar esse novo arquivo |
 | `:w !sudo tee %`    | Salva o arquivo como usuário administrativo |
+| `:r !bash_cmd`    | Alimenta buffer corrente com resultado do comando bash |
 
 ## Ajuda do Vim
 > No sistema de ajuda do vim, use `CTRL-]` para acessar um link, e `CTRL-o` ou `CTRL-t` para
@@ -71,6 +73,7 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `gg`        | Vai para a primeira linha do texto |
 | `G`         | Vai para a última linha do texto |
 | `Ngg` ou `NG` | Vai para a linha `N` |
+| `50%`       | Vai para a metade do arquivo |
 | `fC`        | Salta para o próximo caractere `C` da linha |
 | `tC`        | Salta para antes do próximo caractere `C` da linha |
 | `FC`        | Salta para o caractere `C` anterior na linha |
@@ -88,6 +91,8 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `Ctrl+f`    | Avança uma tela para baixo |
 | `Ctrl+u`    | Volta meia tela para cima |
 | `Ctrl+d`    | Avança meia tela para baixo |
+| `gf`        | Abre arquivo sob cursor |
+| `gx`        | Abre URL sob cursor |
 
 > Prefixar um movimento com um número faz com que ele seja repetido.
 [^1]: Opção **scrolloff** interfere no posicionamento do cursor
@@ -143,6 +148,10 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `=%`   | Reindenta um bloco delimitado por parêntesis ou chaves |
 | `=iB`  | Reindenta o interior de um bloco entre chaves |
 | `gg=G` | Reindenta todo o buffer |
+| `*` | Busca por palavra sob cursor (avançando no texto) |
+| `#` | Busca por palavra sob cursor (retrocedendo no texto) |
+| `g*` | Busca por palavras que contenham a palavra sob cursor (avançando)|
+| `g#` | Busca por palavras que contenham a palavra sob cursor (avançando)|
 
 ## Modo Comando/Busca
 | Comando | Descrição |
@@ -284,6 +293,7 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `:e[dit] CAMINHO`     | Abre CAMINHO no explorador de arquivos (`netrw`). |
 | `:bn[ext]`            | Vai para o buffer seguinte.     |
 | `:bp[revious]`        | Vai para o buffer anterior.     |
+| `Ctrl+6`              | Alterna entre buffers recentes |
 | `:bd[elete]`          | Deleta o buffer corrente (fecha o arquivo). |
 | `:b[uffer]N`          | Vai para o buffer `N`. |
 | `:b[uffer] ARQUIVO`   | Vai para o buffer de nome ARQUIVO. |
@@ -301,7 +311,9 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `Ctrl+ws` | Divide a janela abaixo. |
 | `Ctrl+wv` | Divide a janela ao lado. |
 | `Ctrl+ww` | Circula entre as janelas. |
-| `Ctrl+wq` | Fecha a janela corrente. |
+| `Ctrl+wq` | Fecha a janela corrente. (`:clo[se]`) |
+| `Ctrl+wc` | Fecha a janela corrente. (`:on[ly]`) |
+| `Ctrl+wo` | Mantém aberta apenas janela atual |
 | `Ctrl+wx` | Troca da janela corrente pela seguinte. |
 | `Ctrl+w=` | Aplica mesma largura e altura a todas as janelas. |
 | `Ctrl+wh` | Move o cursor para a janela à esquerda. |
