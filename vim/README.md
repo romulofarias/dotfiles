@@ -377,8 +377,9 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 
 1. Gere macros com comandos repetíveis: busque mover-se de forma eficiente no texto e que esses movimentos sejam repetíveis (ex.: f,F,t,T,w,e,b,ge etc)
 2. Normalize a posição do cursor: certifique-se de que a varredura sempre inicia de uma mesma posição
-3. Macros em série ou paralelo?: depende. Executar a macro em paralelo, ex.:%normal @a, é mais robusta, porém há o risco de efetuarmos mudanças indesejadas pelo fato das macros estarem executando independentemente umas das outras, a falha em uma delas não afeta as demais. Em contrapartida, na execução serial (10@a), se uma 'iteração' falhar aborta a execução das demais, e assim podemos perceber onde está o problema.
+3. Macros em série ou paralelo?: depende. Executar a macro em paralelo, ex.``:%normal @a``, é mais robusta, porém há o risco de efetuarmos mudanças indesejadas pelo fato das macros estarem executando independentemente umas das outras, a falha em uma delas não afeta as demais.
+Em contrapartida, na execução serial (10@a), se uma 'iteração' falhar aborta a execução das demais, e assim podemos perceber onde está o problema.
 4. Para quando quisermos atuar sobre um arquivo inteiro, podemos fazer uma "macro recursiva"
-   inserindo uma chamada a ela mesma no final da sua gravação, como em.: `qa[cmds]@aq`. Assim, ao
-   executarmos a macro uma vez, ela será executada recursivamente até o fim do arquivo.
+inserindo uma chamada a ela mesma no final da sua gravação, como em.: `qa[cmds]@aq`. Assim, ao
+executarmos a macro uma vez, ela será executada recursivamente até o fim do arquivo.
 
