@@ -4,11 +4,8 @@
 
 ## Referências
 Fonte: [Vim Cheat Sheet](https://vim.rtorr.com/lang/pt_br)
-
 Ajuda: [Help online](https://vimhelp.org/)
-
 Ebook: [Vim para noobs](https://leanpub.com/vimparanoobs/read)
-
 Vimcasts: [vimcasts.org](http://vimcasts.org/)
 
 ## Comandos globais
@@ -177,6 +174,9 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `:%s/PADRÃO/SUBSTITUIÇÃO/gc` | Troca PADRÃO por SUBSTITUIÇÃO em todo o documento pedindo confirmação. |
 | `:noh[lsearch]`              | Desliga o destaque dos casamentos da busca. |
 | `:let @/ = ""`               | Remove o destaque dos casamentos anteriores. |
+| `:[range]normal cmd`         | Executa cmd em modo normal sobre range de linhas |
+| `@:` ou `@@` (se já repetido)  | Repete (em modo normal) último comando Ex executado |
+| `Ctrl+o` | Desfaz uma repetição (em modo normal) do último comando Ex executado |
 
 ### Busca em múltiplos arquivos
 
@@ -275,7 +275,7 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 
 | Comando | Descrição |
 |---|---|
-| `:tabnew [ARQUIVO]`      | Abre ARQUIVO em nova aba. |
+| `:tabnew [ARQUIVO]` ou `:tabedit ARQUIVO`     | Abre ARQUIVO em nova aba. |
 | `Ctrl+wT`                | Move a janela corrente para a própria aba. |
 | `gt` ou `:tabn[ext]`     | Abre a aba seguinte. |
 | `gT` ou `:tabp[revious]` | Abre a aba anterior. |
@@ -311,9 +311,9 @@ Vimcasts: [vimcasts.org](http://vimcasts.org/)
 | `Ctrl+ws` | Divide a janela abaixo. |
 | `Ctrl+wv` | Divide a janela ao lado. |
 | `Ctrl+ww` | Circula entre as janelas. |
-| `Ctrl+wq` | Fecha a janela corrente. (`:clo[se]`) |
-| `Ctrl+wc` | Fecha a janela corrente. (`:on[ly]`) |
-| `Ctrl+wo` | Mantém aberta apenas janela atual |
+| `Ctrl+wq` | Fecha a janela corrente.  |
+| `Ctrl+wc` | Fecha a janela corrente. (`:clo[se]`) |
+| `Ctrl+wo` | Mantém aberta apenas janela atual (`:on[ly]`)|
 | `Ctrl+wx` | Troca da janela corrente pela seguinte. |
 | `Ctrl+w=` | Aplica mesma largura e altura a todas as janelas. |
 | `Ctrl+wh` | Move o cursor para a janela à esquerda. |
@@ -395,3 +395,21 @@ Em contrapartida, na execução serial (10@a), se uma 'iteração' falhar aborta
 inserindo uma chamada a ela mesma no final da sua gravação, como em.: `qa[cmds]@aq`. Assim, ao
 executarmos a macro uma vez, ela será executada recursivamente até o fim do arquivo.
 
+# Editando arquivo via SSH
+
+`vim scp://user@server[:port]//path/to/file`
+
+# Atalhos do Bash
+| Comando | Descrição |
+|---|---|
+| `Ctrl+w` | Apaga uma palavra para trás |
+| `Ctrl+u` | Apaga uma linha para trás |
+| `Ctrl+k` | Apaga uma linha para frente |
+| `Ctrl+y` | Cola texto da área de transferência |
+| `Ctrl+l` | Limpa a tela |
+| `Ctrl+a` | Move cursor para início da linha |
+| `Ctrl+e` | Move cursor para final da linha |
+| `Ctrl+b` | Move cursor um caractere para trás |
+| `Ctrl+f` | Move cursor um caractere para frente |
+| `Alt-b` | Salta cursor uma palavra atrás |
+| `Alt-f` | Salta cursor uma palavra a frente |
