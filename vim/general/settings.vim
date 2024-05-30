@@ -1,10 +1,10 @@
 set nocompatible
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 runtime macros/matchit.vim
 syntax on                               " Enables syntax highlighing
 set background=dark                     " tell vim what the background color looks like
+set confirm
+set path=.,**
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set wrap textwidth=100                  " quebra de linha automática na coluna 80
 set linebreak
@@ -28,7 +28,11 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
 set ttyfast                             " melhora redesenho de janelas
+set complete+=kspell
+set shortmess+=c
 set completeopt=longest,menuone         " Desabilita preview
+set spelllang=pt_br,en
+set nospell
 set history=1000                        " grava 1000 comandos e padrões de busca
 set number                              " Line numbers
 set relativenumber			            " Line numbers relative to cursorline
@@ -103,3 +107,4 @@ au BufNewFile,BufRead *.py
   \     textwidth=79
 
 au BufNewFile,BufRead *.md set conceallevel=0                      " So that I can see `` in markdown files
+hi Comment cterm=italic gui=italic
