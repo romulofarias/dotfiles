@@ -107,4 +107,3 @@ au BufNewFile,BufRead *.py
   \     textwidth=79
 
 au BufNewFile,BufRead *.md set conceallevel=0                      " So that I can see `` in markdown files
-hi Comment cterm=italic gui=italic
