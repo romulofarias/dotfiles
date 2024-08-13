@@ -5,7 +5,7 @@ then
     declare -i LOWLVL=7
 
     #STATE = charging or discharging
-    read -d ' ' STATE BATTERY < <(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | \
+    read -d ' ' STATE BATTERY < <(upower -i /org/freedesktop/UPower/devices/battery_BAT1 | \
             awk '/state|percentage/ {print $2}')
     #STATE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | \
     #        awk '/state/ {print $2}')
@@ -16,8 +16,8 @@ then
     echo "<span font='Font Awesome'>⚡︁</span> $BATTERY"
 
     [[ ${STATE,,} = "discharging" ]] && [[ ${BATTERY//%/} -lt $LOWLVL ]] && \
-        i3-nagbar -t warning -m "Battery low level" >>/tmp/i3.module.battery.log \ 
-        2>>/tmp/i3.module.battery.err 
+        i3-nagbar -t warning -m "Battery low level" >>/tmp/i3.module.battery.log \
+        2>>/tmp/i3.module.battery.err
 else
     exit 1
 fi
