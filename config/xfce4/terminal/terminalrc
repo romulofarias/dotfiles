@@ -2,7 +2,7 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
-MiscBordersDefault=TRUE
+MiscBordersDefault=FALSE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
@@ -22,7 +22,7 @@ MiscCopyOnSelect=FALSE
 MiscShowRelaunchDialog=TRUE
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
-MiscSlimTabs=FALSE
+MiscSlimTabs=TRUE
 MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
@@ -32,4 +32,4 @@ ColorForeground=#dcdcdc
 ColorBackground=#2c2c2c
 ColorCursor=#dcdcdc
 FontName=Mononoki Nerd Font 12
-
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
