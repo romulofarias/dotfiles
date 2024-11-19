@@ -1,0 +1,99 @@
+# Indicadores (variáveis)
+ind_prefix="#{?client_prefix,PREFIX,}"
+color_windows="#[fg=gray,bg=default]"
+color_wcurrent="#[fg=cyan,bold,bg=default]"
+
+# Setting the prefix from C-b to C-a
+set -g prefix C-a
+
+# Free the original Ctrl-b prefix keybinding
+unbind C-b
+
+#setting the delay between prefix and command
+set -sg escape-time 1
+
+# Ensure that we can send Ctrl-A to other apps
+bind C-a send-prefix
+
+# Set the base index for windows to 1 instead of 0
+set -g base-index 1
+
+# Set the base index for panes to 1 instead of 0
+setw -g pane-base-index 1
+
+# Reindex windows
+# Every time a window is created/destroyed, the indexes will be sorted again.
+set -g renumber-windows on
+
+setw -g automatic-rename off
+set -g allow-rename off
+# Tip from https://github.com/nicknisi/vim-workshop:
+#
+# "Rather than constraining window size to the maximum size of any client
+# connected to the *session*, constrain window size to the maximum size of any
+# client connected to *that window*. Much more reasonable."
+setw -g aggressive-resize on
+
+# Buffer size
+set -g history-limit 20000
+
+# Switching between panels using Alt+arrow
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Switching between panel using hjkl
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Reload the file with Prefix r
+bind r source-file ~/.tmux.conf \; display "Tmux Reloaded!"
+
+# splitting panes
+bind | split-window -h
+bind - split-window -v
+
+# Quick pane selection
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# Pane resizing
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# mouse support - set to on if you want to use the mouse
+set -g mouse on
+#set -g mouse-select-pane on
+#set -g mouse-resize-pane on
+#set -g mouse-select-window on
+
+# enable activity alerts
+setw -g monitor-activity on
+set -g visual-activity on
+
+# Status line left side
+set -g status-left-length 40
+set -g status-left "#[fg=cyan][#S]: #[fg=cyan](#P/#{window_panes}) ${ind_prefix}"
+set -g status on
+set -g status-style "bg=default"
+set-window-option -g window-status-activity-style bold,underscore
+set-option -g message-style bg=cyan,fg=black
+
+# Status line right side
+# 15% | 28 Nov 18:15
+set -g status-right "#[fg=cyan]%d.%b %R"
+
+# Update the status bar every second
+set -g status-interval 1
+
+# Center the window list
+set -g status-justify centre
+set -g window-status-format "${color_windows}#I:#W"
+set -g window-status-current-format "${color_wcurrent}#I:#W"
+# enable vi keys.
+setw -g mode-keys vi
