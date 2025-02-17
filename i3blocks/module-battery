@@ -13,7 +13,8 @@ then
     #BATTERY=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | \
     #    awk '/percentage/ {print $2}')
 
-    echo "<span font='Font Awesome'>⚡︁</span> $BATTERY"
+    echo "BAT $BATTERY"
+    #echo "<span font='Font Awesome'>&#x25;</span> $BATTERY"
 
     [[ ${STATE,,} = "discharging" ]] && [[ ${BATTERY//%/} -lt $LOWLVL ]] && \
         i3-nagbar -t warning -m "Battery low level" >>/tmp/i3.module.battery.log \
