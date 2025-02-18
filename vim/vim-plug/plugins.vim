@@ -155,7 +155,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Exibe linhas verticais finas em cada nível de recuo para código recuado com espaços.
   Plug 'Yggdroot/indentLine'
   " Latex Use Overleaf
-  Plug 'lervag/vimtex'
+  Plug 'lervag/vimtex', { 'tag': 'v2.15' }
   Plug 'matze/vim-tex-fold'
   " Cool Icons
   Plug 'ryanoasis/vim-devicons'
