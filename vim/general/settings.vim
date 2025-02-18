@@ -74,7 +74,8 @@ set scrolloff=8                         "número mínimo de linhas acima e abaix
 set signcolumn=yes                      "coluna para sinalização em lintings
 " For conceal markers.
 if has('conceal')
-   set conceallevel=2 concealcursor=niv
+   set conceallevel=0
+   set concealcursor=niv
 endif
 
 " Configuração para o gvim
@@ -106,4 +107,4 @@ au BufNewFile,BufRead *.py
   \     shiftwidth=4
   \     textwidth=79
 
-au BufNewFile,BufRead *.md set conceallevel=0                      " So that I can see `` in markdown files
+au BufNewFile,BufRead *.{md,tex} set conceallevel=0                      " So that I can see `` in markdown files

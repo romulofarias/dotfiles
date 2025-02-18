@@ -18,6 +18,7 @@ source $HOME/dotfiles/vim/plug-config/easymotion.vim
 source $HOME/dotfiles/vim/plug-config/git-messenger.vim
 source $HOME/dotfiles/vim/plug-config/quickscope.vim
 source $HOME/dotfiles/vim/plug-config/coc.vim
+source $HOME/dotfiles/vim/plug-config/tex.vim
 "source $HOME/dotfiles/vim/plug-config/rnvimr.vim
 "source $HOME/dotfiles/vim/plug-config/vimrooter.vim
 "source $HOME/dotfiles/vim/plug-config/vimspector.vim
