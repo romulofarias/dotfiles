@@ -1,5 +1,5 @@
 " set leader key
-let g:mapleader = "\\"
+let g:mapleader = "\<Space>"
 
 "vmap <up> gk
 "vmap <down> gj
