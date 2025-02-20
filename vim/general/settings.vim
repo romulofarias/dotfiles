@@ -60,9 +60,6 @@ set ignorecase
 set smartcase
 set showmatch
 set autoread                            " Automatically read a file that has changed on disk
-set foldmethod=indent                   " Cria (folders) dobras de código no VIM
-set nofoldenable			            " Todas as dobras aperecem abertas.
-set foldlevel=2
 set wildmode=list:longest,full
 set backspace=indent,eol,start          "backspace atua sobre indentação, quebra de linha e início de linha
 set undofile
