@@ -1,1 +1,2 @@
-let g:vimtex_syntax_enabled=0      " disable syntax conceal
+set conceallevel=0
+let g:vimtex_syntax_conceal_disable=1

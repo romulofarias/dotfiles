@@ -72,7 +72,7 @@ set signcolumn=yes                      "coluna para sinalização em lintings
 " For conceal markers.
 if has('conceal')
    set conceallevel=0
-   set concealcursor=niv
+   " set concealcursor=niv
 endif
 
 " Configuração para o gvim
