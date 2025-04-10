@@ -104,4 +104,9 @@ au BufNewFile,BufRead *.py
   \     shiftwidth=4
   \     textwidth=79
 
+au BufNewFile,BufRead *.html
+  \ set tabstop=2
+  \     softtabstop=2
+  \     shiftwidth=2
+
 au BufNewFile,BufRead *.{md,tex} set conceallevel=0                      " So that I can see `` in markdown files
