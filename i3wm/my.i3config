@@ -231,6 +231,7 @@ bindsym $mod+d exec rofi -show drun
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+f $exe firefox
+bindsym $mod+c $exe chromium
 bindsym $mod+b exec ~/dotfiles/i3wm/lock
 
 #---------------------------------------------------------------------------------------------------
