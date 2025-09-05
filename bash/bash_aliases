@@ -25,10 +25,9 @@ alias fgrep='fgrep $GREP_OPTIONS'
 alias egrep='egrep $GREP_OPTIONS'
 
 # download de videos
-alias yt='youtube-dl --add-metadata -ic'
+alias yt='yt-dlp --add-metadata -ic'
 # download apenas do audio
-alias yta='yt -x'
-
+alias yta='yt -f bestaudio --extract-audio --audio-quality 0 --audio-format mp3'
 # Fedora Aliases
 if grep -iq 'fedora' /etc/os-release; then
   alias dnfi="sudo dnf install"
