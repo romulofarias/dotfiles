@@ -1,5 +1,5 @@
 " Minha atual paleta de cores
-colorscheme gruvbox
+colorscheme sonokai
 hi Comment cterm=italic gui=italic
 "colorscheme codedark
 "colorscheme edge
