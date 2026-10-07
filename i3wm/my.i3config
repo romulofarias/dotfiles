@@ -97,7 +97,7 @@ bar {
 
 # Configura posicionamento de displays no meu laptop
 exec ip a | grep -q 28:19:90 && xrandr --output HDMI-1 --auto --left-of eDP-1
-exec ip a | grep -q 34:97:f6 && xrandr --output DVI-D-0 --auto --right-of DVI-I-1
+#exec ip a | grep -q 34:97:f6 && xrandr --output DVI-D-0 --auto --right-of DVI-I-1
 
 #---------------------------------------------------------------------------------------------------
 # 5. Teclas de ação
